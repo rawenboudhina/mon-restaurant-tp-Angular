@@ -70,9 +70,20 @@ listestylecuisines():Stylecuisine[] {
   consulterstylecuisine(id:number): Stylecuisine{ 
     return this.stylecuisines.find(style => style.idstyle == id)!;
     } 
+<<<<<<< HEAD
     rechercherParCategorie(idstyle: number): Observable<Plat[]> {
       const platsFiltres = this.plats.filter(plat => plat.stylecuisine.idstyle === idstyle);
       return of(platsFiltres);
     }
   }
+=======
+    /* rechercherParCategorie(idstyle: number): Observable<Plat[]> {
+      const platsFiltres = this.plats.filter(plat => plat.stylecuisine.idstyle === idstyle);
+      return of(platsFiltres);*/
+        rechercherParStyle(idstyle: number): Plat[] {
+    const filtredPlat=this.plats.filter((plat) => this.plat.stylecuisine.idstyle == idstyle);
+    return filtredPlat;
+  }
+    } 
+>>>>>>> 9fd6c1f36cd3aa36af0d758e94123a50cf80686b
   

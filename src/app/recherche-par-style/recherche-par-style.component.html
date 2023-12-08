@@ -1,4 +1,5 @@
 <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+<<<<<<< HEAD
     <label>style de cuisines </label>
    <!--<select class="form-control form-control-lg" id="idstyle" name="idstyle"[(ngModel)]="idstyle" (change)="onChange()"> -->
     <!-- <option *ngFor="let styledecuisine of styledecuisines" value="{{styledecuisine.idstyle}}">
@@ -6,3 +7,39 @@
      </option> 
     </select> -->
     </div>
+=======
+    <label>Style de cuisines</label>
+    <select class="form-control form-control-lg" id="idstyle" name="idstyle" >
+   <!-- [(ngModel)]="idstyle" (change)="onChange()"  -->
+    >
+        <option *ngFor="let styledecuisine of stylecuisines" [value]="styledecuisine.idstyle">
+            {{styledecuisine.nomstyle}}
+        </option>
+    </select>
+</div>
+
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prix</th>
+                    <th>Date Création</th>
+                    <th>Style de cuisine</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let plat of plats">
+                <tr>
+                    <td>{{plat.idPlat}}</td>
+                    <td>{{plat.nomPlat}}</td>
+                    <td>{{plat.prixPlat}}</td>
+                    <!-- <td>{{plat.dateCreation | date:'dd/MM/yyyy'}}</td> -->
+                    <td>{{plat.stylecuisine.nomstyle}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+>>>>>>> 9fd6c1f36cd3aa36af0d758e94123a50cf80686b
